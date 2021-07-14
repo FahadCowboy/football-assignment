@@ -82,8 +82,42 @@ Playeers section starts here
     background-color: white;
 }
 
-#players-profile-wrap{
+#players-profile-container{
     padding: 3.43em;
+}
+
+#players-profile-container h2{
+    font-size: 2em;
+    margin: 0 0 2.5em 0;
+    text-align: center;
+    color: #000000ab;
+    position: relative;
+}
+
+#players-profile-container h2::before{
+    content: "";
+    position: absolute;
+    background-color: #000000ab;
+    padding: 1px;
+    width: 1.5em;
+    transform: rotate(180deg);
+    left: 48%;
+    top: 99%;
+    top: 108%;
+}
+
+#players-profile-container h2::after{
+    content: "";
+    position: absolute;
+    background-color: #000000ab;
+    padding: 2px;
+    width: 2em;
+    transform: rotate(180deg);
+    left: 47.3%;
+    top: 127%;
+}
+
+#players-profile-wrap{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.875em;
@@ -148,7 +182,7 @@ News section starts here
     top: 115%;
 }
 
-.new-wrap{
+.news-wrap{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.875em;
@@ -311,11 +345,67 @@ Footer section starts here
 Here I have applied @media query to make this website responsive
 ********************************/
 
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+@media only screen and (max-width: 688px) {
+/***** Banner Section *****/
+    #banner-wrap {
+        display: block;
     }
-  }
+
+    #banner-left {
+        padding: 0 0 6em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #banner-left h1 {
+        text-align: center;
+    }
+
+/***** Players Section *****/
+    #players-profile-container {
+        padding: 3.43em 0;
+    }
+
+    #players-profile-container h2 {
+        margin: 0 0 1.5em 0;
+    }
+
+    #players-profile-container h2::after {
+        left: 46.8%;
+    }
+
+    #players-profile-wrap {
+        padding: 2.4em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+/***** News Section *****/
+    #news-container h2::before {
+        left: 47.4%;
+    }
+
+    #news-container h2::after {
+        left: 46.3%;
+    }
+
+    .news-wrap {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 1em 0 1em;
+    }
+
+/***** Sponsor Section *****/
+    #sponsor-container h2::after {
+        left: 46.8%;
+    }
+
+    #sponsor-wrap {
+        padding: 4em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6em 9em;
+    }
+}
 
 
 
