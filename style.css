@@ -16,8 +16,12 @@
 
 .full-width{
     width: 100%;
-    display: flex;
+
+
+   display: flex;
     justify-content: center;
+    /* flex-direction: column;
+    align-items: center; */
 }
 
 .centerd-boxes{
@@ -73,7 +77,25 @@ Banner section starts here
 
 #banner-right img{
     width: 100%;
+    position: relative;
+    transition: all 2s ease;
+
+    display: inline-block;
+    transform: skew(5deg);
+    animation: shake 2s infinite;
+    animation-direction: alternate;
 }
+
+
+  @keyframes shake {
+    0% {
+      transform: skewY(5deg);
+    }
+    100% {
+      transform: skewY(-5deg);
+    }
+  }
+
 
 /*******************************
 Playeers section starts here
@@ -342,10 +364,11 @@ Footer section starts here
 
 
 /*******************************
-Here I have applied @media query to make this website responsive
+Here I have applied @media query to make this website responsive for Mobile device.
 ********************************/
 
-@media only screen and (max-width: 688px) {
+@media only screen and (min-width: 310px) and (max-width: 688px) {
+
 /***** Banner Section *****/
     #banner-wrap {
         display: block;
@@ -360,6 +383,7 @@ Here I have applied @media query to make this website responsive
 
     #banner-left h1 {
         text-align: center;
+        font-size: 30px;
     }
 
 /***** Players Section *****/
@@ -400,14 +424,23 @@ Here I have applied @media query to make this website responsive
     }
 
     #sponsor-wrap {
-        padding: 4em;
+        padding: 2em;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 6em 9em;
+        gap: 4em 3em;
+    }
+
+    #banner-right{
+        text-align: center;
+    }
+    #banner-right img{
+        width: 80%;
+    }
+
+    #footer-wrap ul {
+        width: 40%;
     }
 }
-
-
 
 
 
