@@ -103,12 +103,148 @@ Playeers section starts here
     font-weight: 700;
     color: #18191F;
     margin: 1em 0 0.7em 0;
+    font-weight: 500;
 }
 
 .individual-players p{
     font-weight: 400;
     color: #6C6C6C;
     text-align: justify;
+}
+
+/*******************************
+News section starts here
+********************************/
+#news-container{
+    padding: 3.43em 0;
+}
+
+#news-container h2{
+    font-size: 2em;
+    margin: 0 0 1.5em 0;
+    text-align: center;
+    position: relative;
+}
+
+#news-container h2::before{
+    content: "";
+    position: absolute;
+    background-color: #b7aca5;
+    padding: 1px;
+    width: 1.5em;
+    transform: rotate(180deg);
+    left: 48%;
+    top: 99%;
+}
+
+#news-container h2::after{
+    content: "";
+    position: absolute;
+    background-color: #b7aca5;
+    padding: 2px;
+    width: 2em;
+    transform: rotate(180deg);
+    left: 47.3%;
+    top: 115%;
+}
+
+.new-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875em;
+}
+
+.individual-news{
+    box-shadow: 0px 0px 20px 0px #c5bdbd;
+    padding: 1em;
+}
+
+.individual-news img{
+    width: 100%;
+}
+
+.individual-news h3{
+    font-size: 1em;
+    color: #18191F;
+    margin: 1em 0 0.7em 0;
+}
+
+.individual-news p{
+    font-weight: 400;
+    color: #6C6C6C;
+    text-align: justify;
+}
+
+.individual-news a{
+    text-decoration: none;
+    color: #c72c2c;
+    display: inline-block;
+    margin: 0.5em 0 0 0;
+    transition: all 0.2s ease;
+}
+
+.individual-news a:hover{
+    color: red;
+}
+
+/*******************************
+Sponsore section starts here
+********************************/
+#sponsor-bg{
+    background-image: url(img/santaigo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#sponsor-container{
+    padding: 3.43em 0 6em 0;
+}
+
+#sponsor-container h2{
+    font-size: 2em;
+    margin: 0 0 3.5em 0;
+    text-align: center;
+    color: #e2e2e2;
+    position: relative;
+}
+
+#sponsor-container h2::before{
+    content: "";
+    position: absolute;
+    background-color: #FFFFFF;
+    padding: 1px;
+    width: 1.5em;
+    transform: rotate(180deg);
+    left: 48%;
+    top: 99%;
+    top: 108%;
+}
+
+#sponsor-container h2::after{
+    content: "";
+    position: absolute;
+    background-color: #FFFFFF;
+    padding: 2px;
+    width: 2em;
+    transform: rotate(180deg);
+    left: 47.3%;
+    top: 127%;
+}
+
+#sponsor-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sopnsor-img-wrap{
+    flex-basis: 13%;
+}
+.sopnsor-img-wrap img{
+    width: 100%;
 }
 
 /*******************************
@@ -162,7 +298,6 @@ Footer section starts here
     left: 0.25em !important;
 }
 
-
 #footer-wrap p{
     font-size: 1.125em;
     font-weight: 400;
@@ -171,14 +306,16 @@ Footer section starts here
 
 
 
-#e7e7e8
-#969bab
 
+/*******************************
+Here I have applied @media query to make this website responsive
+********************************/
 
-
-
-
-
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
 
 
 
